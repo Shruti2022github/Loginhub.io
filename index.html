@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stylex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body >
+    <div class="full-page">
+<a href="img2.jpeg">
+<img src="img2.jpeg" align=center width=1350px>
+</a>
+        <div class="sub-page">
+            <div class="navigation-bar">
+                <div class="logo">
+                    
+                </div>
+                
+            </div>
+<center>
+            <div class="row">
+                <div class="col-1">
+                    <div class="form-box">
+                        <div class="form">
+                            <form class="login-form">
+                                <center><h1 class="main-heading">Login Form</h1></center>
+				                <input type="text"placeholder="user name"/>
+                               
+                                
+                                <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="password"/>
+                                <i class="far fa-eye" id="togglePassword" style=" margin-left: -50px; cursor: pointer;"></i>
+                                
+                                
+
+                                                                          
+				                
+                                
+                                <button type="submit" class="btn btn-primary">Login</button>
+				                <p class="message">Not Registered? <a href="#">Register</a></p>
+				            </form>
+                            <script>
+                                const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#id_password');
+
+togglePassword.addEventListener('click', function (e) {
+  // toggle the type attribute
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  // toggle the eye slash icon
+  this.classList.toggle('fa-eye-slash');
+});
+                            </script>
+              <form class="register-form">
+                                <center><h1 class="main-heading">Register Form</h1></center>
+				                <input type="text" placeholder="user name"/>
+				                
+                                <input type="email" name="email" placeholder="email-id" required>
+				                <input type="password" placeholder="password"/>
+                                
+                               
+				                <button>REGISTER</button>
+				                <p class="message">Already Registered?<a href="#">Login</a>
+				                </p>
+				            </form>
+			             </div>
+	                </div>
+                </div>
+
+                <div class="col-1">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script>
+    <script>
+        $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
+    </script>
+</body>
+</html>
